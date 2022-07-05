@@ -78,8 +78,7 @@ const updateBlog = async function (req, res) {
     try {
         let data = req.body
         let blogId = req.params.blogId
-        let blog = await blogModel.findOne({ _id: blogId, isDeleted: false })
-        if (!blog) { return res.status(404).send({ status: false, msg: "blog not found" }) }
+         let blog = await blogModel.findOne({ _id: blogId, isDeleted: false })
         if(Object.keys(data).length<1)return res.status(400).send({status:false,msg:"Enter what you want to update"})
         if (data.tags) {
             data.tags = blog.tags.concat(data.tags)
@@ -133,7 +132,7 @@ module.exports.deleteBlog= deleteBlog
 let queryDelete = async function (req, res) {
     try {
         let data = req.query
-        if (Object.keys(data).length < 1) return res.status(400).send({ status: false, msg: "query params is not given" })
+      
        
         let blogs= await blogModel.find({$and:[data,{isDeleted:false}]})
         if (blogs.length<1) return res.status(404).send({ status: false, msg: "blog does not exist" })

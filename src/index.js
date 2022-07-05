@@ -11,7 +11,7 @@ app.use(bodyparser.urlencoded({extended:true}))
 //====================================================Data-Base Connection=================================================================
 
 
-mongoose.connect("mongodb+srv://functionup-radon-cohort:radon123@cluster0.zbsotuc.mongodb.net/projectBlog?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://Keshav-cyber:7LizqrsG6tL39fuT@cluster0.ohm0bak.mongodb.net/blogsite?retryWrites=true&w=majority", {
     useNewUrlParser: true
 })
 .then( () => console.log("MongoDb is connected"))

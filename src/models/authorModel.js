@@ -4,7 +4,7 @@ const authorSchema = new mongoose.Schema({
 
     fname: {
         type: String,
-        required: true
+        required: true,
     },
 
     lname: {
@@ -31,4 +31,4 @@ const authorSchema = new mongoose.Schema({
 },
     { timestamps: true });
 
-module.exports = mongoose.model('authorModel', authorSchema)
+module.exports = mongoose.model('author', authorSchema)

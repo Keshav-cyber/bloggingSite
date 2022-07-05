@@ -11,7 +11,7 @@ router.post("/authors", AuthorController.createAuthor)
 router.post("/login",AuthorController.loginAuthor)
 
 
-router.post("/blogs",authenticate, BlogController.createBlog)
+router.post("/blogs",authenticate,newAuth,BlogController.createBlog)
 router.get("/blogs",authenticate,BlogController.getBlogData)
 
 
